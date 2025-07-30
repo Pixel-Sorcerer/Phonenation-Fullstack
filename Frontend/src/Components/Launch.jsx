@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import masterData from '../Arrays/Masterdata/Master';
+import masterData from '../Arrays/MasterData/Master';
 import latestLaunch from '../Arrays/LatestLaunch/LatestLaunch';
 import './Launch.css';
 import "@fontsource/poppins/600.css";
