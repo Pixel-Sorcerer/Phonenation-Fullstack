@@ -24,6 +24,7 @@ const SignupPage = () => {
     };
 
     const [showPassword, setShowPassword] = useState(false);
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
 
     const togglePasswordVisibility = () => {
         setShowPassword(prev => !prev);
@@ -31,7 +32,7 @@ const SignupPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/signup', formData)
+        axios.post(`${backendURL}/signup`, formData)
             .then(result => {
                 console.log(result)
                 navigate('/login')

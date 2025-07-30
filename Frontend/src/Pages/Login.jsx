@@ -29,10 +29,12 @@ const LoginPage = () => {
         setShowPassword(prev => !prev);
     };
 
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/login', formData);
+            const response = await axios.post(`${backendURL}/login`, formData);
 
             if (response.data.status === "Success") {
                 // Store user ID in localStorage

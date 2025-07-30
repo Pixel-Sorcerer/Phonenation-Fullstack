@@ -10,13 +10,15 @@ const ProductPage = () => {
     const [mainImage, setMainImage] = useState(product?.images[0]?.image);
     const [isFavorite, setIsFavorite] = useState(false);
 
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
+
     const handleAddToFav = async () => {
         try {
             const customerId = localStorage.getItem('customerId'); // You'll need to set this on login
 
             if (!isFavorite) {
                 // Add to favorites
-                await axios.post('http://localhost:3001/favorites', {
+                await axios.post(`${backendURL}/favorites`, {
                     customerId,
                     productId: productId.toLowerCase(),
                     productName: product.name,
@@ -24,7 +26,7 @@ const ProductPage = () => {
                 });
             } else {
                 // Remove from favorites
-                await axios.delete(`http://localhost:3001/favorites/${customerId}/${productId.toLowerCase()}`);
+                await axios.delete(`${backendURL}/favorites/${customerId}/${productId.toLowerCase()}`);
             }
             setIsFavorite(!isFavorite);
         } catch (err) {
