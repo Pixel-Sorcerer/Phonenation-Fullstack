@@ -1,0 +1,53 @@
+.box {
+    width: 75vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 11%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.brand {
+    width: 11vw;
+    height: 16vh;
+    margin: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.brand:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:390px) {
+
+    .box {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    .brand {
+        width: 35vw;
+        height: 15vh;
+        margin: 7px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+}
