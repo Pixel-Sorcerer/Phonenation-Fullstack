@@ -3,7 +3,7 @@ import image2 from './REALME-C65.jpg';
 import image3 from './REALME-GT-6T.jpg';
 import image4 from './REALME-NARZO-70-PRO.jpg';
 import image5 from './REALME-NARZO-70-TURBO.jpg';
-import image6 from './REALME-NARZO-70X.jpg';
+import image6 from './REALME-NARZO-70x.jpg';
 import image7 from './REALME-NARZO-N61.jpg';
 import image8 from './REALME-NARZO-N65.jpg';
 import image9 from './REALME-P1.jpg';
