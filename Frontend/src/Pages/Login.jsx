@@ -34,22 +34,22 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${backendURL}/login`, formData);
+            const response = await axios.post(`${backendURL}login`, formData);
 
             if (response.data.status === "Success") {
-                // Store user ID in localStorage
+
                 localStorage.setItem('customerId', response.data.userId);
 
-                // Navigate to home
+
                 navigate('/home');
             } else {
-                // Handle other response cases
+
                 console.error("Login failed:", response.data.status);
-                alert(response.data.status); // Show error to user
+                alert(response.data.status);
             }
         } catch (err) {
             console.error("Login error:", err);
-            alert("Login failed. Please try again."); // Show error to user
+            alert("Login failed. Please try again.");
         }
     };
 

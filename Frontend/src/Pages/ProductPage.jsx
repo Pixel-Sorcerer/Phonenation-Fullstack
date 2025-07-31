@@ -26,7 +26,7 @@ const ProductPage = () => {
                 });
             } else {
                 // Remove from favorites
-                await axios.delete(`${backendURL}/favorites/${customerId}/${productId.toLowerCase()}`);
+                await axios.delete(`${backendURL}favorites/${customerId}/${productId.toLowerCase()}`);
             }
             setIsFavorite(!isFavorite);
         } catch (err) {

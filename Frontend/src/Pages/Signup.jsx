@@ -32,7 +32,7 @@ const SignupPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(`${backendURL}/signup`, formData)
+        axios.post(`${backendURL}signup`, formData)
             .then(result => {
                 console.log(result)
                 navigate('/login')
