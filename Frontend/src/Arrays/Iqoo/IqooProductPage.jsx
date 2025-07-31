@@ -5,7 +5,7 @@ import image4 from './IQOO-NEO-9-PRO.jpg';
 import image5 from './IQOO-Z7-PRO.jpg';
 import image6 from './IQOO-Z9-LITE.jpg';
 import image7 from './IQOO-Z9.jpg';
-import image8 from './IQOO-Z9S-PRO.jpg';
+import image8 from './iqoo-z9spro.jpg';
 import image9 from './IQOO-Z9S.jpg';
 import image10 from './IQOO-Z9X.jpg';
 
