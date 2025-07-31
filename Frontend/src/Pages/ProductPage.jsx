@@ -18,7 +18,7 @@ const ProductPage = () => {
 
             if (!isFavorite) {
                 // Add to favorites
-                await axios.post(`${backendURL}/favorites`, {
+                await axios.post(`${backendURL}favorites`, {
                     customerId,
                     productId: productId.toLowerCase(),
                     productName: product.name,
