@@ -8,10 +8,13 @@ const FavoritesPage = () => {
     const [loading, setLoading] = useState(true);
     const customerId = localStorage.getItem('customerId');
 
+    const backendURL = import.meta.env.VITE_BACKEND_URL;
+
+
     useEffect(() => {
         const fetchFavorites = async () => {
             try {
-                const response = await axios.get(`http://localhost:3001/favorites/${customerId}`);
+                const response = await axios.get(`${backendURL}favorites/${customerId}`);
                 setFavorites(response.data);
                 setLoading(false);
             } catch (err) {
@@ -25,7 +28,7 @@ const FavoritesPage = () => {
 
     const handleRemoveFavorite = async (productId) => {
         try {
-            await axios.delete(`http://localhost:3001/favorites/${customerId}/${productId}`);
+            await axios.delete(`${backendURL}favorites/${customerId}/${productId}`);
             setFavorites(favorites.filter(item => item.productId !== productId));
         } catch (err) {
             console.error('Error removing favorite:', err);
