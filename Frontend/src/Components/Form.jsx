@@ -13,7 +13,7 @@ function Form() {
                     <input type="email" placeholder="Email" name="Email" required />
                     <textarea cols="30" rows="3" placeholder="Enter Your Message" name="Message" required></textarea>
                     <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="http://localhost:5173/thanks" />
+                    <input type="hidden" name="_next" value="https://phonenation.vercel.app/thanks" />
                     <button type="submit">Submit</button>
                 </form>
             </div>
